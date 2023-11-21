@@ -59,3 +59,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: core.setFailed('It seems the build process failed silently. See previous step for more info.')
+      - uses: actions/upload-artifact@v3
+        with:
+          name: r2modman
+          path: dist/electron/Packaged
